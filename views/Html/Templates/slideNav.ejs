@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      display: block;
+      width: 200px;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .margin-zero {
+      margin-left: 0px;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .toggleSlidebar {
+      display: none;
+    }
+
+    /* Active/current link */
+    .sidebar a.active {
+      background-color:rgb(208, 192, 172);
+      
+    }
+
+    /* Links on mouse-over */
+    .sidebar a:hover:not(.active) {
+      background-color: rgb(224, 224, 177);
+      
+    }
+
+    /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+    div.content {
+      margin-left: 200px;
+      /* padding: 1px 16px; */
+      height: 1000px;
+      position: relative;
+    }
+
+    /* On screens that are less than 700px wide, make the sidebar into a topbar */
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .sidebar a {
+        float: left;
+      }
+
+      div.content {
+        margin-left: 0;
+      }
+    }
+
+    .content-sidebar {
+      margin-top: 58px;
+      position: relative;
+    }
+
+    /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-sidebar">
+    <div id="slideBar" class="sidebar">
+      <a ondblclick="dbHome()" onclick="Home()"><img src="/views/Src/sidebar/004-home.png" alt="Home" height="12px"
+          width="12px"> Home</a>
+      <a onclick="Shorts()"><img src="/views/Src/sidebar/ytShorts.png" alt="Shorts" height="12px" width="12px">
+        Shorts</a>
+      <a onclick="Explore()"><img src="/views/Src/sidebar/006-explore.png" alt="Explore" height="12px" width="12px">
+        Explore</a>
+      <hr>
+      <a onclick="Liberary()"><img src="/views/Src/sidebar/video-liberary.png" alt="Liberary" height="12px"
+          width="12px">
+        Liberary</a>
+      <a onclick="Home()"><img src="/views/Src/sidebar/007-history.png" alt="History" height="12px" width="12px">
+        History</a>
+      <a onclick="Home()"><img src="/views/Src/sidebar/003-subscription.png" alt="Subscription height=" 12px"
+          width="12px"> Subscription</a>
+      <a onclick="Home()"><img src="/views/Src/sidebar/yt-watchLetter.png" alt="" height="12px" width="12px"> Watch
+        leter</a>
+      <a onclick="Home()"><img src="/views/Src/sidebar/002-playlist.png" alt="" height="12px" width="12px"> PlayList</a>
+      <hr onclick="Home()">
+      <span style="color: grey; height: 0.3rem;width: 1rem;margin-left: 13px; ">Subscibers</span>
+      <a onclick="Home()">Kalua</a>
+      <a onclick="Home()">pankha</a>
+      <a onclick="Home()">Pandit</a>
+      <a onclick="Home()">Puskar Gaitonde</a>
+      <button class="btn btn-outline-success" style="margin-left: 15px;" onclick="Home()" id="showMoreSubscription">Show more</button>
+      <div class="ytSetting" style="padding: 10px;">
+        <hr>
+        <a href="#"><img src="/views/Src/sidebar/009-settings.png" height="12px" width="12px" alt="Settings">
+          Settings</a>
+        <a href="#"><img src="/views/Src/sidebar/010-report.png" height="12px" width="12px" alt="Report"> Report</a>
+        <a href="#"><img src="/views/Src/sidebar/001-information.png" height="12px" width="12px" alt="Help"> Help</a>
+        <a href="#"><img src="/views/Src/sidebar/sendFeedback.png" height="12px" width="12px" alt="sendFeedback">
+          sendFeedback</a>
+          <a href="#" >kalua</a>
+      </div>
+    </div>
+
+    <div id="Content" class="content margin-zero">
+      <%- include('./Videos.ejs');%>
+    </div>
+  </div>
+  <script>
+
+    function Home() {
+      console.log("You clicked Home")
+    }
+    function dbHome() {
+      console.log("You double clicked Home")
+    }
+    function Shorts() {
+      console.log("You clicked Shorts")
+    }
+    function Explore() {
+      console.log("You clicked Explore")
+    }
+    function Liberary() {
+      console.log("You clicked Liberary")
+    }
+  </script>
+</body>
+
+</html>

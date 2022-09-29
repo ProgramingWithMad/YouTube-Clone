@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Views/favicon/favico.png" type="image/x-icon">
+  <title>Home-YouTube</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    .navBar-Home {
+      width: 100vw;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+    }
+
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navBar-Home">
+    <%- include('./Templates/NavBar.ejs')  %> 
+  </div>
+  <div class="solidNav"> 
+    <%- include('./Templates/slideNav.ejs') %> 
+  </div>
+</body>
+
+</html>

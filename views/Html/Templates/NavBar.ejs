@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <style>
+    .logo {
+      margin-right: 5px;
+      margin-left: 10px;
+      padding: 5px;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Roboto Slab', serif;
+
+    }
+
+    #navbar {
+      overflow: hidden;
+    }
+
+    #hambar {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+
+    .cont1 {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      float: right;
+      margin-right: 20px;
+    }
+
+    .addVideos {
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .notification {
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .User {
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .image-upload>input {
+      display: none;
+    }
+
+    #video {
+      cursor: pointer;
+    }
+
+    .Login {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    .signUp {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <div id="navbar">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="Ham">
+        <i id="hambar" class="fa-solid fa-bars "></i>
+      </div>
+      <div class="logo">
+        <a href="/" style="text-decoration: none; color: black;font-family: 'Roboto Slab', serif;">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
+          style="height: 30px; width:50px" alt="Img">
+        <span>YouTube</span>
+      </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 500px;">
+        <form class="d-flex" id="Search" role="search" style="width: 70%;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="cont1">
+        <div class="addVideos">
+          <div class="image-upload">
+            <label for="file-input">
+              <img id="video" src="/Views/Src/Icons/add-video-24px.png" />
+            </label>
+            <input id="file-input" type="file" accept="video/*, video/*"/>
+          </div>
+        </div>
+        <div class="notification">
+          <a href="/addVideos"><img src="/Views/Src/Icons/bell-ring-24px.png" alt="add-video"></a>
+        </div>
+        <div class="User">
+          <a id="addUser" href="/addUser"><img src="/Views/Src/Icons/add-user-24px.png" alt="add-video"></a>
+        </div>
+
+        <div class="Login">
+          <a id="Login" class="btn btn-outline-success" href="/YouTube-user-Login">Login</a>
+        </div>
+        <div class="signUp">
+          <a id="singUp" class="btn btn-outline-success" href="/YouTube-user-SignUp">Sign Up</a>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+
+
+  <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ec404a36e8.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
